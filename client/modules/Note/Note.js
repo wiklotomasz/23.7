@@ -1,0 +1,12 @@
+import React, { PropTypes } from 'react';
+import styles from './Note.css';
+
+const Note = props =>{
+  return (<li className={"styles.Note"}>{props.children}</li>);
+}
+
+Note.propTypes = {
+  children: PropTypes.any,
+};
+
+export default Note;
