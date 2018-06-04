@@ -3,9 +3,16 @@ import * as LaneController from '../controllers/lane.controller';
 
 const router = new Router();
 
-router.route('/lanes').post(LaneController.addLane);
+// get all Lanes
 router.route('/lanes').get(LaneController.getLanes);
+
+// add new Lane
+router.route('/lanes').post(LaneController.addLane);
+
+// delete lane
 router.route('/lanes/:laneId').delete(LaneController.deleteLane);
-router.route('/lanes/:laneId').post(LaneController.changeLaneName);
+
+// edit lane
+router.route('/lanes/:laneId').put(LaneController.editLane);
 
 export default router;
