@@ -6,6 +6,9 @@ import Lanes from '../Lane/Lanes';
 import styles from '../Lane/Lane.css';
 import * as laneActions from '../Lane/LaneActions';
 import {createNote, createNoteRequest} from '../Note/NoteActions';
+import { compose } from 'redux';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 
 const Kanban = (props) => (
@@ -38,4 +41,7 @@ const mapDispatchToProps = {
   createLane: createLaneRequest,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Kanban);
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  DragDropContext(HTML5Backend)
+)(Kanban);

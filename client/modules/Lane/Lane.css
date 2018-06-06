@@ -1,1 +1,35 @@
-/* Lane styles */
+.Lane {
+	width: 300px;
+	min-height: 200px;
+	float:left;
+	margin-right: 20px;
+}
+
+.LaneHeader {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	height: 50px;
+	background: #e75d56;
+	text-align: center;
+}
+
+.LaneName {
+	background: green;
+	text-align: center;
+	font-size: 40px;
+}
+
+.LaneDetails {
+	background: purple;
+	min-height: 300px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.LaneAddNote {
+	padding: 10px;
+}
+
+.RemoveLaneButton {
+	margin-left: 130px;
+}
